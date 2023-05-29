@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0885aed773d32e34ba01b485acc22e15, type: 3}
+  m_Name: Wheat
+  m_EditorClassIdentifier: 
+  cropName: "\u5C0F\u9EA5"
+  cropItem: {fileID: 11400000, guid: 99e1419145a50704abf1441e003784ed, type: 2}
+  growthStages:
+  - {fileID: 1708887029739243956, guid: 4d4dd7a7cec41bf4aae7488e57261496, type: 3}
+  - {fileID: 4198261993612661634, guid: b3a190de2a5a8804fad813186946aef1, type: 3}
+  - {fileID: 8857220854178652059, guid: bd60dc6a6e760c946895599466bf9d4c, type: 3}
+  - {fileID: 6017951246275382480, guid: 0ab55725196bf35498c251fa017e170d, type: 3}
+  growthTimes:
+  - 1
+  - 1
+  - 1
+  - 1
