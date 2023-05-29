@@ -58,6 +58,7 @@ public class InventoryManager : MonoBehaviour
                     
                     break;
                 }
+                
             }
         }
         else if (toolbar.itemList.Contains(thisItem))
