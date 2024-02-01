@@ -7,19 +7,20 @@ public class TurnIntoFarm : MonoBehaviour
 {
     public GameObject originalObject;  // 原始物体
     public GameObject FarmPrefab;       // 农田预制体
-    private ItemOnDrag itemOnDrag;
+    public Item tool;
 
-    private void Start()
+    private void Update()
     {
-        // itemOnDrag = FindObjectOfType<ItemOnDrag>();
+        tool = ChooseSlot.heldItem;
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (other.CompareTag("Player"))
+            if (other.CompareTag("Player") && tool.name == "Hoe")
             {
+                Debug.Log(tool.name);
                 TransformLand();
             }
         }

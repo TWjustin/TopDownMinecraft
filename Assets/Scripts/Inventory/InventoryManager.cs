@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class InventoryManager : MonoBehaviour
 {
-    static InventoryManager instance;
+    public static InventoryManager instance;
 
     public Inventory backpack;
     public GameObject backpackPanel;

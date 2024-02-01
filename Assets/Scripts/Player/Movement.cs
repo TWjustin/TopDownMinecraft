@@ -33,6 +33,15 @@ public class Movement : MonoBehaviour
         // Get the horizontal and vertical inputs
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (movement.x < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if (movement.x > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
         
         // 更新玩家位置
         currentPlayerPosition = GetPlayerGridPosition();
@@ -68,7 +77,7 @@ public class Movement : MonoBehaviour
     {
         // 根據玩家的前進方向計算前一格的位置
         Vector2Int forwardDirection = GetCurrentForwardDirection();
-        Vector2Int previousCellPosition = currentPlayerPosition - forwardDirection;
+        Vector2Int previousCellPosition = currentPlayerPosition + forwardDirection;
 
         return previousCellPosition;
     }

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Resource : MonoBehaviour
 {
     public InventoryManager inventoryManager;
+    public Item tool;
+    public Item matchedTool; // 资源可以被破坏的工具
     
     public Item dropItem; // 资源被破坏后掉落的物品
     public int minAmount = 2; // 资源掉落的最小数量
@@ -26,13 +28,24 @@ public class Resource : MonoBehaviour
         // healthBar.GetComponent<HealthBar>().SetMaxHealth(maxHealth); // 设置生命值条的最大值
         // Debug.Log(healthBar.GetComponent<HealthBar>().slider.value);
     }
+    
+    private void Update()
+    {
+        tool = ChooseSlot.heldItem;
+    }
 
-    // Update is called once per frame
     void OnTriggerStay2D (Collider2D other)
     {
-        if(Input.GetKeyDown(KeyCode.K))
+        if(Input.GetKeyDown(KeyCode.O))
         {
-            HitResource(20);
+            if (other.CompareTag("Player") && tool == matchedTool)
+            {
+                HitResource(20);
+            }
+            else
+            {
+                Debug.Log("必須拿斧頭");
+            }
         }
     }
     

@@ -48,6 +48,7 @@ public class ChooseSlot : MonoBehaviour
         }
 
         // 執行切換物品欄邏輯，例如更新 UI 或設置選中的物品狀態
+        Debug.Log(currentItemID);
         Choose();
     }
 
@@ -62,6 +63,7 @@ public class ChooseSlot : MonoBehaviour
         }
 
         // 執行切換物品欄邏輯，例如更新 UI 或設置選中的物品狀態
+        Debug.Log(currentItemID);
         Choose();
     }
     

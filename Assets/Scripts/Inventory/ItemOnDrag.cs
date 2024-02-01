@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,17 +6,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class ItemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Transform originalParent;
     public Inventory inventory;
     private int currentItemID;
-
-    public GameObject selectedSlot;  // 已選擇的槽位
-    private static Slot previousSelectedSlot;  // 先前選擇的格子
-    public Color originalColor;
-    public Item heldItem;   // 手持物品
-
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         originalParent = transform.parent;  // slot
@@ -70,33 +66,5 @@ public class ItemOnDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         transform.SetParent(originalParent);
         transform.position = originalParent.position;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-    }
-    
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
-        
-        // 檢測滑鼠左鍵是否點擊
-        if (eventData.button == PointerEventData.InputButton.Left)
-        {
-            if (eventData.pointerPress.transform.parent.CompareTag("Slot"))
-            {
-                // 選取該槽位
-                selectedSlot = eventData.pointerPress.transform.parent.gameObject;
-                
-                if(previousSelectedSlot != null)
-                    previousSelectedSlot.GetComponent<Image>().color = originalColor;
-                selectedSlot.GetComponent<Image>().color = Color.white;
-                previousSelectedSlot = selectedSlot.GetComponent<Slot>();
-                
-                // 手持
-                heldItem = inventory.itemList[selectedSlot.GetComponent<Slot>().slotID];
-                Debug.Log(heldItem.itemName);
-            }
-            else
-            {
-                Debug.Log("未選擇槽位");
-            }
-        }
     }
 }

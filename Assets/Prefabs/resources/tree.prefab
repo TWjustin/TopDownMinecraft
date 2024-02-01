@@ -483,6 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 0}
+  tool: {fileID: 0}
+  matchedTool: {fileID: 11400000, guid: aeae94296efd3214da9a1c9f921a3269, type: 2}
   dropItem: {fileID: 11400000, guid: 4de7ac9c776fb6c49b3d920106c24072, type: 2}
   minAmount: 2
   maxAmount: 4

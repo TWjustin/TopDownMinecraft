@@ -1090,9 +1090,9 @@ MonoBehaviour:
   - {fileID: 229473565193573029, guid: 8dba236b901d8224fb7f3b600056d9a0, type: 3}
   - {fileID: 4355469567020536027, guid: 52e986e63ffd41a489e8570375ad2d97, type: 3}
   - {fileID: 5125448025552008089, guid: 8e003db11c6e80349b269a7dd2e0ecee, type: 3}
-  xRange: {x: 0, y: 100}
-  yRange: {x: 0, y: 100}
-  spawnCount: 1000
+  xRange: {x: 0, y: 60}
+  yRange: {x: 0, y: 60}
+  spawnCount: 300
   container: {fileID: 327562491}
 --- !u!4 &1752957091
 Transform:
@@ -1123,8 +1123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39adf8997f994a54daaaa9a81ef7d39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 100
-  height: 100
+  width: 60
+  height: 60
   scale: 10
   grassPrefab: {fileID: 8052275754972718195, guid: 486e30ff331630f4b9568f62871ea9ff, type: 3}
   waterPrefab: {fileID: 7859056425322974984, guid: 6a97aa8526b37244290c825ec584d5b1, type: 3}
@@ -1242,7 +1242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887419749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.42, y: 48.32, z: -10}
+  m_LocalPosition: {x: 26.8, y: 17.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1262,11 +1262,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4969839269867743564, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.5
+      value: 26.8
       objectReference: {fileID: 0}
     - target: {fileID: 4969839269867743564, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 47.9
+      value: 17.6
       objectReference: {fileID: 0}
     - target: {fileID: 4969839269867743564, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1301,21 +1301,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4969839269867743566, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4969839269867743566, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
       propertyPath: backpack
       value: 
       objectReference: {fileID: 975135898}
-    - target: {fileID: 4969839269867743566, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4969839269867743602, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -6242400748221277083, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f3a459ba6cc4b43bbfb7c9a6cf42c3, type: 3}

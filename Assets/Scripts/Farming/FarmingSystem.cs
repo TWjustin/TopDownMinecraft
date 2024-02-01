@@ -6,7 +6,7 @@ public class FarmingSystem : MonoBehaviour
     public InventoryManager inventoryManager;
     
     public Transform cropParent; // 作物的父物件，用於組織作物
-    
+
     private bool isPlanted = false; // 是否已種植作物
     private int currentStage = 0; // 當前生長階段
     private float currentGrowthTime = 0f; // 當前成長時間
@@ -14,7 +14,7 @@ public class FarmingSystem : MonoBehaviour
     public CropData currentCropData; // 當前種植的作物數據
     private GameObject currentCrop; // 當前種植的作物
     private bool harvestable = false; // 是否可收穫
-
+    
     private void Start()
     {
         inventoryManager = FindObjectOfType<InventoryManager>();
@@ -102,13 +102,23 @@ public class FarmingSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            PlantCrop(currentCropData);
+            if(other.CompareTag("Player"))
+            {
+                PlantCrop(currentCropData);
+            }
+            else
+            {
+                Debug.Log("種不下去");
+            }
         }
         
         if (Input.GetKeyDown(KeyCode.O) && harvestable)
         {
-            // 作物已成熟，執行收穫操作
-            HarvestCrop();
+            if(other.CompareTag("Player"))
+            {
+                Debug.Log("收穫");
+                HarvestCrop();
+            }
         }
     }
 }

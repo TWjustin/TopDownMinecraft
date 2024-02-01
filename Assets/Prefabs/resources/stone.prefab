@@ -124,5 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59898c2ab838431439c980cb7247f1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisItem: {fileID: 11400000, guid: 590493d0d688f9b46a6684879e6d9e38, type: 2}
+  dropItems:
+  - {fileID: 11400000, guid: 590493d0d688f9b46a6684879e6d9e38, type: 2}
   inventoryManager: {fileID: 0}

@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Land
   - Water
+  - Hover
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Attackable
   - 
   - 
   - 

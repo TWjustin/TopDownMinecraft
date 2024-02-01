@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab7cf3a85525ed4a8c41baba22088e2, type: 3}
   m_Name: Hoe
   m_EditorClassIdentifier: 
-  itemName: Hoe
+  itemName: "\u92E4\u982D"
   itemImage: {fileID: 21300000, guid: 332af57c9fad3d84e84154309eb30fe6, type: 3}
   itemHeld: 1
   itemInfo: "\u92E4\u982D"

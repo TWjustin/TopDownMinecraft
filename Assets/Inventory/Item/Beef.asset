@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab7cf3a85525ed4a8c41baba22088e2, type: 3}
   m_Name: Beef
   m_EditorClassIdentifier: 
-  itemName: 
-  itemImage: {fileID: 0}
-  itemHeld: 0
+  itemName: "\u725B\u8089"
+  itemImage: {fileID: 21300000, guid: e9996e09b251152449fc97a9125fc479, type: 3}
+  itemHeld: 6
   itemInfo: 
   equip: 0

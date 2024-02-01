@@ -7,7 +7,7 @@ public class Refresh : MonoBehaviour
     public Inventory inventory;
     public GameObject slotGrid;
     public GameObject emptySlot;
-    public List<GameObject> slotsList = new List<GameObject>();
+    public static List<GameObject> slotsList = new List<GameObject>();
     
     // 清空物品槽的方法
     public void ClearSlots()

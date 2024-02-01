@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 2530205286591108896}
   - component: {fileID: 7325092226591333137}
   - component: {fileID: 893704223333417781}
+  - component: {fileID: 1960637867996433841}
   m_Layer: 5
   m_Name: Item
   m_TagString: Untagged
@@ -283,7 +284,6 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 6aeb5565e8e3bf44db0f4503c7b3a3af, type: 2}
   selectedSlot: {fileID: 0}
   originalColor: {r: 1, g: 0.7137255, b: 0.7137255, a: 1}
-  heldItem: {fileID: 0}
 --- !u!225 &2530205286591108896
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -372,6 +372,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1960637867996433841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578581433190904732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ce1b6b3410430428d23f67c0a78b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 6aeb5565e8e3bf44db0f4503c7b3a3af, type: 2}
+  selectedSlot: {fileID: 0}
+  originalColor: {r: 1, g: 0.7137255, b: 0.7137255, a: 1}
 --- !u!1 &8645784050125440083
 GameObject:
   m_ObjectHideFlags: 0
